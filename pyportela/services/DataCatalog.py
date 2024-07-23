@@ -1,20 +1,9 @@
-
-from typing import Union
-
-from pyportela.models.DatasetSchema import DatasetSchema
-from pyportela.models.TableSchema import TableSchema
+from pyportela.services.OrganizationService import OrganizationService
 
 
 class DataCatalog:
-    
 
-    def register_table(self, table: TableSchema):
-        pass
+    organizations: OrganizationService
 
-    def register_dataset(self, dataset: DatasetSchema):
-        pass
-
-    def register(self, schema: Union[TableSchema, DatasetSchema]):
-        if isinstance(schema, TableSchema):
-            self.register_table(schema)
-        pass
+    def __init__(self) -> None:
+        self.organizations = OrganizationService()

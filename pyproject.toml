@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "pyportela"
+version = "1.0.1"
+authors = [
+  { name="Rodrigo Portela", email="rodrigo.portela@gmail.com" },
+]
+description = "The portela python package for interacting with portela.dev."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/rportela/pyportela"
+Issues = "https://github.com/rportela/pyportela/issues"

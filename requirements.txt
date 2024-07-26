@@ -1,3 +1,6 @@
 supabase
 pydantic
 requests
+pandas
+sqlalchemy
+psycopg2-binary

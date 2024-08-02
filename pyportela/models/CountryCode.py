@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class CountryCode(Enum):
+class CountryCode(str, Enum):
     AD = "AD"
     AE = "AE"
     AG = "AG"

@@ -11,4 +11,4 @@ class DataResource(BaseModel):
     expires_at: Optional[datetime] = None
     downloaded_at: Optional[datetime] = None
     created_at: datetime = datetime.now()
-    tags: Optional[str] = None
+    etag: Optional[str] = None

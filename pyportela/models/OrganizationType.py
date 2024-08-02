@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class OrganizationType(Enum):
+class OrganizationType(str, Enum):
     COM = "COM"
     ORG = "ORG"
     NET = "NET"

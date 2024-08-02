@@ -1,6 +1,6 @@
 from collections import defaultdict
 from io import BytesIO
-from typing import Dict, Union
+from typing import Dict, Optional, Union
 from zipfile import ZipFile
 
 import pandas as pd
@@ -48,3 +48,21 @@ def download(url: str) -> BytesIO:
     response = requests.get(url)
     response.raise_for_status()
     return BytesIO(response.content)
+
+
+def digits_to_int(input: str) -> Optional[int]:
+    """
+    This function receives a string with digits and returns an integer.
+    """
+    digits = "".join([c for c in input if c.isdigit()])
+    return int(digits) if digits else None
+
+
+def validate_name(input: str) -> None:
+    """
+    This function validates if a name contains forbidden characters.
+    """
+    forbidden_chars = [".", ",", "__", " ", "-"]
+    for char in forbidden_chars:
+        if char in input:
+            raise ValueError(f"Name cannot contain '{char}'")
